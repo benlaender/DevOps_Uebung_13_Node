@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: benlaender/node:latest
+          tags: benlaender/node_app:l${{github.sha}}
 
   deploy:
     permissions:
@@ -42,4 +42,4 @@ jobs:
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: 'benlaender/node:latest'
+          images: 'benlaender/node_app:latest'
