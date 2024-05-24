@@ -9,7 +9,7 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('At least the docker deployment works. By Bodtlben');
+  res.send('At least the docker deployment works. Azure does not like me, but Docker and Github like me ;D By Bodtlben');
 });
 
 app.listen(PORT, HOST);
